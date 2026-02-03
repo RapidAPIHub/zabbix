@@ -44,8 +44,12 @@ services:
     restart: unless-stopped
     environment:
       ZBX_SERVER_HOST: zabbix-server
-    networks:
-      - zabbix-net
+      ZBX_HOSTNAME: Zabbix-VPS
+    volumes:
+      - /:/host:ro
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /var/run/docker.sock:/var/run/docker.sock
 
 networks:
   zabbix-net:
