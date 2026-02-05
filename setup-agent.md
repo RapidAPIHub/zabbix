@@ -32,9 +32,12 @@
     ```
     Tìm và chỉnh sửa các dòng sau:
     ```
-    Server=<IP_or_Hostname_of_Zabbix_Server>
     ServerActive=<IP_or_Hostname_of_Zabbix_Server>
     Hostname=<Unique_Hostname_for_This_Agent>
+    ```
+    Xóa dòng sau
+    ```
+    Server=127.0.0.1
     ```
 6. Lưu và đóng file cấu hình.
 7. Khởi động và kích hoạt dịch vụ zabbix-agent2 để nó tự động chạy khi khởi động hệ thống:
